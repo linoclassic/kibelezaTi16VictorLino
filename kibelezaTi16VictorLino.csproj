@@ -49,25 +49,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="01-Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="01-Login.Designer.cs">
+      <DependentUpon>01-Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="02-Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="02-Menu.Designer.cs">
+      <DependentUpon>02-Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03-Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-Empresa.Designer.cs">
+      <DependentUpon>03-Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04-Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-Funcionario.Designer.cs">
+      <DependentUpon>04-Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05-Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05-Cliente.Designer.cs">
+      <DependentUpon>05-Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="06Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="06Servico.Designer.cs">
+      <DependentUpon>06Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07-CadEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07-CadEmpresa.Designer.cs">
+      <DependentUpon>07-CadEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08-CadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08-CadFuncionario.Designer.cs">
+      <DependentUpon>08-CadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09-CadCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09-CadCliente.Designer.cs">
+      <DependentUpon>09-CadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="10-CadServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10-CadServico.Designer.cs">
+      <DependentUpon>10-CadServico.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="01-Login.resx">
+      <DependentUpon>01-Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="02-Menu.resx">
+      <DependentUpon>02-Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Empresa.resx">
+      <DependentUpon>03-Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-Funcionario.resx">
+      <DependentUpon>04-Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05-Cliente.resx">
+      <DependentUpon>05-Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="06Servico.resx">
+      <DependentUpon>06Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07-CadEmpresa.resx">
+      <DependentUpon>07-CadEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08-CadFuncionario.resx">
+      <DependentUpon>08-CadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09-CadCliente.resx">
+      <DependentUpon>09-CadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10-CadServico.resx">
+      <DependentUpon>10-CadServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
