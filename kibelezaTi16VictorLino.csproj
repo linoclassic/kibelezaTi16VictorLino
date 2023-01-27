@@ -121,6 +121,12 @@
     <Compile Include="12-Sobre.Designer.cs">
       <DependentUpon>12-Sobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="13-Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13-Ajuda.Designer.cs">
+      <DependentUpon>13-Ajuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="01-Login.resx">
@@ -158,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="12-Sobre.resx">
       <DependentUpon>12-Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13-Ajuda.aa.resx">
+      <DependentUpon>13-Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13-Ajuda.resx">
+      <DependentUpon>13-Ajuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

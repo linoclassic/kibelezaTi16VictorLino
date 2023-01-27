@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlAjuda.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabLogin.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTexto.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTexto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblTexto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblTexto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>985, 507</value>
+  </data>
+  <data name="lblTexto.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblTexto.Text" xml:space="preserve">
+    <value>1. Digite o nome do Usuário Cadastrado;
+
+2. Digite a senha desse Usuário;
+
+Caso o Usuário ou a Senha seja digitada errada por 3x o sistema sera bloqueado;
+
+Em caso de bloqueio, entrar em contato com o desenvolvedor do sistema;
+
+ 
+</value>
+  </data>
+  <data name="lblTexto.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblTexto.Name" xml:space="preserve">
+    <value>lblTexto</value>
+  </data>
+  <data name="&gt;&gt;lblTexto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTexto.Parent" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;lblTexto.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabLogin.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabLogin.Text" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Name" xml:space="preserve">
+    <value>tabLogin</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabMenu.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblMenu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>985, 507</value>
+  </data>
+  <data name="lblMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblMenu.Text" xml:space="preserve">
+    <value>Data, Hora e mensagem são gerados automaticamente.
+
+1. Botão Cliente: Abre a tela com a lista de clientes cadastrados no sistema;
+2. Botão Funcionário: Abre a tela com a lista de funcionários cadastrados no sistema;
+3. Botão Empresa;
+</value>
+  </data>
+  <data name="lblMenu.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblMenu.Name" xml:space="preserve">
+    <value>lblMenu</value>
+  </data>
+  <data name="&gt;&gt;lblMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMenu.Parent" xml:space="preserve">
+    <value>tabMenu</value>
+  </data>
+  <data name="&gt;&gt;lblMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabMenu.Text" xml:space="preserve">
+    <value>MENU</value>
+  </data>
+  <data name="&gt;&gt;tabMenu.Name" xml:space="preserve">
+    <value>tabMenu</value>
+  </data>
+  <data name="&gt;&gt;tabMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabMenu.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabEmpresa.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEmpresa.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblEmpresa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblEmpresa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblEmpresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>985, 507</value>
+  </data>
+  <data name="lblEmpresa.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblEmpresa.Text" xml:space="preserve">
+    <value>Abre uma tela onde sera possível ver uma lista com o nomes das empresas.
+
+1. Botão Cadastrar: Nele sera possível cadastrar empresas, colocando informações das quais serão registradas;
+
+2. Botão Alterar: Nele você pode fazer alguma alteração nos dados de uma empresa;
+
+3. Botão Excluir. Excluir os dados de uma empresa.
+
+</value>
+  </data>
+  <data name="lblEmpresa.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Name" xml:space="preserve">
+    <value>lblEmpresa</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.Parent" xml:space="preserve">
+    <value>tabEmpresa</value>
+  </data>
+  <data name="&gt;&gt;lblEmpresa.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabEmpresa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabEmpresa.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabEmpresa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabEmpresa.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabEmpresa.Text" xml:space="preserve">
+    <value>EMPRESA</value>
+  </data>
+  <data name="&gt;&gt;tabEmpresa.Name" xml:space="preserve">
+    <value>tabEmpresa</value>
+  </data>
+  <data name="&gt;&gt;tabEmpresa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabEmpresa.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabEmpresa.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabFuncionario.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFuncionario.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblFuncionario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblFuncionario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblFuncionario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="lblFuncionario.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblFuncionario.Text" xml:space="preserve">
+    <value>Abre uma tela onde sera possível ver uma lista com o nomes dos funcionários.
+
+1. Botão Cadastrar: Nele sera possível cadastrar funcionários, colocando informações das quais serão registradas;
+
+2. Botão Alterar: Nele você pode fazer alguma alteração nos dados de um funcionário;
+
+3. Botão Excluir. Excluir os dados de um funcionário.
+</value>
+  </data>
+  <data name="lblFuncionario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Name" xml:space="preserve">
+    <value>lblFuncionario</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.Parent" xml:space="preserve">
+    <value>tabFuncionario</value>
+  </data>
+  <data name="&gt;&gt;lblFuncionario.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 28</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 456</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>SISTEMA DESENVOLVIDO PELA TURMA
+
+TÉCNICO EM INFORMATICA TI-16 - 2023
+
+SENAC SÃO MIGUEL PAULISTA
+
+DESENVOLVIDO POR VICTOR LINO
+</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tabFuncionario</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabFuncionario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabFuncionario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabFuncionario.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabFuncionario.Text" xml:space="preserve">
+    <value>FUNCIONÁRIO</value>
+  </data>
+  <data name="&gt;&gt;tabFuncionario.Name" xml:space="preserve">
+    <value>tabFuncionario</value>
+  </data>
+  <data name="&gt;&gt;tabFuncionario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabFuncionario.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabFuncionario.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabCliente.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCliente.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="lblCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblCliente.Text" xml:space="preserve">
+    <value>Abre uma tela onde sera possível ver uma lista com o nomes dos clientes.
+
+1. Botão Cadastrar: Nele sera possível cadastrar clientes, colocando informações das quais serão registradas;
+
+2. Botão Alterar: Nele você pode fazer alguma alteração nos dados de um cliente;
+
+3. Botão Excluir. Excluir os dados de um cliente.
+</value>
+  </data>
+  <data name="lblCliente.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblCliente.Name" xml:space="preserve">
+    <value>lblCliente</value>
+  </data>
+  <data name="&gt;&gt;lblCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCliente.Parent" xml:space="preserve">
+    <value>tabCliente</value>
+  </data>
+  <data name="&gt;&gt;lblCliente.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabCliente.Text" xml:space="preserve">
+    <value>CLIENTE</value>
+  </data>
+  <data name="&gt;&gt;tabCliente.Name" xml:space="preserve">
+    <value>tabCliente</value>
+  </data>
+  <data name="&gt;&gt;tabCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabCliente.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabCliente.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabServico.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblServico.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblServico.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblServico.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblServico.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblServico.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="lblServico.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblServico.Text" xml:space="preserve">
+    <value>Abre uma tela onde sera possível ver uma lista com o nomes dos serviços.
+
+1. Botão Cadastrar: Nele sera possível cadastrar serviços, colocando informações das quais serão registradas;
+
+2. Botão Alterar: Nele você pode fazer alguma alteração nos dados de um serviço;
+
+3. Botão Excluir. Excluir os dados de um serviço.
+</value>
+  </data>
+  <data name="lblServico.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblServico.Name" xml:space="preserve">
+    <value>lblServico</value>
+  </data>
+  <data name="&gt;&gt;lblServico.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblServico.Parent" xml:space="preserve">
+    <value>tabServico</value>
+  </data>
+  <data name="&gt;&gt;lblServico.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabServico.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabServico.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabServico.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabServico.Text" xml:space="preserve">
+    <value>SERVIÇO</value>
+  </data>
+  <data name="&gt;&gt;tabServico.Name" xml:space="preserve">
+    <value>tabServico</value>
+  </data>
+  <data name="&gt;&gt;tabServico.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabServico.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabServico.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabRelatorio.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRelatorio.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="lblRelatorio.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 20.25pt</value>
+  </data>
+  <data name="lblRelatorio.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRelatorio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblRelatorio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="lblRelatorio.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblRelatorio.Text" xml:space="preserve">
+    <value>Abre uma tela onde sera possível ver uma lista de relatório.
+
+1. Na parte tabela sera possível selecionar 3 opções: Cliente, Empresa, Funcioário;
+
+2. Na parte filtro, sera possível realizar uma pesquisa mais precisa, podendo selecionar: Ativo, Inativo, Telefone.
+
+</value>
+  </data>
+  <data name="lblRelatorio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblRelatorio.Name" xml:space="preserve">
+    <value>lblRelatorio</value>
+  </data>
+  <data name="&gt;&gt;lblRelatorio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRelatorio.Parent" xml:space="preserve">
+    <value>tabRelatorio</value>
+  </data>
+  <data name="&gt;&gt;lblRelatorio.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabRelatorio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabRelatorio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabRelatorio.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabRelatorio.Text" xml:space="preserve">
+    <value>RELATÓRIO</value>
+  </data>
+  <data name="&gt;&gt;tabRelatorio.Name" xml:space="preserve">
+    <value>tabRelatorio</value>
+  </data>
+  <data name="&gt;&gt;tabRelatorio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabRelatorio.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabRelatorio.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabReserva.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabReserva.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 32</value>
+  </data>
+  <data name="tabReserva.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 513</value>
+  </data>
+  <data name="tabReserva.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tabReserva.Text" xml:space="preserve">
+    <value>RESERVA</value>
+  </data>
+  <data name="&gt;&gt;tabReserva.Name" xml:space="preserve">
+    <value>tabReserva</value>
+  </data>
+  <data name="&gt;&gt;tabReserva.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabReserva.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabReserva.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 15.75pt</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 64</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>999, 549</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>pnlAjuda</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnFechar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnFechar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnFechar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1142, 8</value>
+  </data>
+  <data name="btnFechar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnFechar.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Name" xml:space="preserve">
+    <value>btnFechar</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.Parent" xml:space="preserve">
+    <value>pnlAjuda</value>
+  </data>
+  <data name="&gt;&gt;btnFechar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlAjuda.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Britannic Bold, 18pt</value>
+  </data>
+  <data name="pnlAjuda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 115</value>
+  </data>
+  <data name="pnlAjuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1206, 627</value>
+  </data>
+  <data name="pnlAjuda.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnlAjuda.Name" xml:space="preserve">
+    <value>pnlAjuda</value>
+  </data>
+  <data name="&gt;&gt;pnlAjuda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlAjuda.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlAjuda.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1328, 856</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>_13_Ajuda</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAjuda</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -55,7 +55,8 @@ namespace kibelezaTi16VictorLino
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            new frmAjuda().Show();
+            Hide();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
