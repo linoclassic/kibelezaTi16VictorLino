@@ -314,6 +314,7 @@
             this.lblSobre.TabIndex = 4;
             this.lblSobre.Text = "SOBRE";
             this.lblSobre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSobre.Click += new System.EventHandler(this.lblSobre_Click);
             // 
             // pctRelatorio
             // 
@@ -325,6 +326,7 @@
             this.pctRelatorio.Size = new System.Drawing.Size(180, 180);
             this.pctRelatorio.TabIndex = 2;
             this.pctRelatorio.TabStop = false;
+            this.pctRelatorio.Click += new System.EventHandler(this.pctRelatorio_Click);
             // 
             // pctServico
             // 

@@ -173,6 +173,7 @@
             this.btnLimpar.TabIndex = 32;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // pnlTelefone01
             // 
@@ -287,7 +288,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(141, 22);
             this.txtCodigo.TabIndex = 21;
-
             // 
             // lblCargaHoraria
             // 
