@@ -23,20 +23,36 @@ namespace kibelezaTi16VictorLino
         {
             pnlMenuPrincipal.Location = new Point(this.Width / 2 - pnlMenuPrincipal.Width / 2, this.Height / 2 - pnlMenuPrincipal.Height / 2);
 
+            
+
             timer1.Start();
 
             if (hora >= 6 && hora < 12)
             {
-                lblMensagem.Text = "Bom dia " + "Lino" + "!";
+                lblMensagem.Text = "Bom dia " + Variaveis.usuario + "!";
             }
             else if (hora >= 12 && hora < 18)
             {
-                lblMensagem.Text = "Boa tarde "  + "Lino" + "!";
+                lblMensagem.Text = "Boa tarde "  + Variaveis.usuario + "!";
             }
             else 
             {
-                lblMensagem.Text = "Boa noite " + "Lino" + "!";
+                lblMensagem.Text = "Boa noite " + Variaveis.usuario + "!";
             }
+
+            if (Variaveis.nivel != "ADMINISTRADOR")
+            {
+                pctFuncionario.Enabled = false;
+                pctEmpresa.Enabled = false;
+            }
+            else
+            {
+                pctFuncionario.Enabled = true;
+                pctEmpresa.Enabled=true;
+            }
+
+
+
         }
 
         private void pctSair_Click(object sender, EventArgs e)

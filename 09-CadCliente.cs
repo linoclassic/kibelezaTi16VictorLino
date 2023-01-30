@@ -42,5 +42,10 @@ namespace kibelezaTi16VictorLino
         {
 
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
