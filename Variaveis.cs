@@ -11,7 +11,31 @@ namespace kibelezaTi16VictorLino
         // Geral
         public static string funcao;
 
+     
+
         // Login
-        public static string usuario, senha, nivel;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        public static string usuario, senha, nivel;
+
+        //Empresa
+        public static int codEmpresa;   
+
+        public static string nomeEmpresa, cnpjCpfEmpresa, razaoSocialEmpresa, emailEmpresa, statusEmpresa;
+
+        public static DateTime dataCadastroEmpresa, horarioAtendimentoEmpresa;
+
+        //Cliente
+        public static int codCliente;
+
+        public static string nomeCliente, emailCliente, statusCliente, fotoCliente;
+
+        public static DateTime dataCadastroCliente;
+
+        //Funcionario
+        public static int codFuncionario;
+
+        public static string nomeFuncionario, emailFuncionario, statusFuncionario;
+
+        public static DateTime dataCadastroFuncionario;
+
     }
 }

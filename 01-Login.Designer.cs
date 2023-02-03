@@ -146,7 +146,6 @@
             this.txtEmail.Size = new System.Drawing.Size(289, 18);
             this.txtEmail.TabIndex = 0;
             this.toolTip1.SetToolTip(this.txtEmail, "Digite seu email");
-          
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // pctNome

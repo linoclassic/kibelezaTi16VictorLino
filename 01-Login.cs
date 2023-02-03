@@ -57,7 +57,7 @@ namespace kibelezaTi16VictorLino
 
             if (Variaveis.usuario == "Victor" && Variaveis.senha == "1234")
             {
-                Variaveis.nivel = "ADIMINISTRADOR";
+                Variaveis.nivel = "ADMINISTRADOR";
                 new frmMenuPrincipal().Show();
                 Hide();
             }
@@ -121,6 +121,6 @@ namespace kibelezaTi16VictorLino
             }
         }
 
-       
+     
     }
 }

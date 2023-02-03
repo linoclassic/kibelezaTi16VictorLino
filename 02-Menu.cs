@@ -162,5 +162,23 @@ namespace kibelezaTi16VictorLino
             new frmSobre().Show();
             Hide();
         }
+
+        private void pctEmpresa_Click_1(object sender, EventArgs e)
+        {
+            new frmEmpresa().Show();
+            Hide();
+        }
+
+        private void pctFuncionario_Click_1(object sender, EventArgs e)
+        {
+            new frmFuncionario().Show();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmEmpresa().Show();
+            Hide();
+        }
     }
 }

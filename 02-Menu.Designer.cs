@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenuPrincipal = new System.Windows.Forms.Panel();
+            this.pctFuncionario = new System.Windows.Forms.PictureBox();
+            this.pctEmpresa = new System.Windows.Forms.PictureBox();
             this.pnlReserva = new System.Windows.Forms.Panel();
             this.dgvReserva = new System.Windows.Forms.DataGridView();
             this.btnAgendar = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.lblSobre = new System.Windows.Forms.Label();
             this.pctRelatorio = new System.Windows.Forms.PictureBox();
             this.pctServico = new System.Windows.Forms.PictureBox();
-            this.pctEmpresa = new System.Windows.Forms.PictureBox();
-            this.pctFuncionario = new System.Windows.Forms.PictureBox();
             this.pctCliente = new System.Windows.Forms.PictureBox();
             this.lblMensagem = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -59,13 +59,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlMenuPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctEmpresa)).BeginInit();
             this.pnlReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRelatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctServico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctEmpresa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSair)).BeginInit();
@@ -74,13 +74,13 @@
             // pnlMenuPrincipal
             // 
             this.pnlMenuPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(204)))), ((int)(((byte)(209)))));
+            this.pnlMenuPrincipal.Controls.Add(this.pctFuncionario);
+            this.pnlMenuPrincipal.Controls.Add(this.pctEmpresa);
             this.pnlMenuPrincipal.Controls.Add(this.pnlReserva);
             this.pnlMenuPrincipal.Controls.Add(this.lblAjuda);
             this.pnlMenuPrincipal.Controls.Add(this.lblSobre);
             this.pnlMenuPrincipal.Controls.Add(this.pctRelatorio);
             this.pnlMenuPrincipal.Controls.Add(this.pctServico);
-            this.pnlMenuPrincipal.Controls.Add(this.pctEmpresa);
-            this.pnlMenuPrincipal.Controls.Add(this.pctFuncionario);
             this.pnlMenuPrincipal.Controls.Add(this.pctCliente);
             this.pnlMenuPrincipal.Controls.Add(this.lblMensagem);
             this.pnlMenuPrincipal.Controls.Add(this.lblHora);
@@ -90,6 +90,32 @@
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
             this.pnlMenuPrincipal.Size = new System.Drawing.Size(1200, 600);
             this.pnlMenuPrincipal.TabIndex = 0;
+            // 
+            // pctFuncionario
+            // 
+            this.pctFuncionario.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.btnFuncionario;
+            this.pctFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctFuncionario.Location = new System.Drawing.Point(205, 413);
+            this.pctFuncionario.Name = "pctFuncionario";
+            this.pctFuncionario.Size = new System.Drawing.Size(180, 180);
+            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFuncionario.TabIndex = 7;
+            this.pctFuncionario.TabStop = false;
+            this.pctFuncionario.Click += new System.EventHandler(this.pctFuncionario_Click_1);
+            // 
+            // pctEmpresa
+            // 
+            this.pctEmpresa.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.btnEmpresa;
+            this.pctEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctEmpresa.Location = new System.Drawing.Point(406, 420);
+            this.pctEmpresa.Name = "pctEmpresa";
+            this.pctEmpresa.Size = new System.Drawing.Size(180, 173);
+            this.pctEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctEmpresa.TabIndex = 6;
+            this.pctEmpresa.TabStop = false;
+            this.pctEmpresa.Click += new System.EventHandler(this.pctEmpresa_Click_1);
             // 
             // pnlReserva
             // 
@@ -335,36 +361,11 @@
             this.pctServico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctServico.Location = new System.Drawing.Point(607, 417);
             this.pctServico.Name = "pctServico";
-            this.pctServico.Size = new System.Drawing.Size(180, 180);
+            this.pctServico.Size = new System.Drawing.Size(180, 176);
             this.pctServico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctServico.TabIndex = 2;
             this.pctServico.TabStop = false;
             this.pctServico.Click += new System.EventHandler(this.pctServico_Click);
-            // 
-            // pctEmpresa
-            // 
-            this.pctEmpresa.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.btnEmpresa;
-            this.pctEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctEmpresa.Location = new System.Drawing.Point(406, 417);
-            this.pctEmpresa.Name = "pctEmpresa";
-            this.pctEmpresa.Size = new System.Drawing.Size(180, 180);
-            this.pctEmpresa.TabIndex = 2;
-            this.pctEmpresa.TabStop = false;
-            this.pctEmpresa.Click += new System.EventHandler(this.pctEmpresa_Click);
-            // 
-            // pctFuncionario
-            // 
-            this.pctFuncionario.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.btnFuncionario;
-            this.pctFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctFuncionario.Location = new System.Drawing.Point(205, 417);
-            this.pctFuncionario.Name = "pctFuncionario";
-            this.pctFuncionario.Size = new System.Drawing.Size(180, 180);
-            this.pctFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctFuncionario.TabIndex = 2;
-            this.pctFuncionario.TabStop = false;
-            this.pctFuncionario.Click += new System.EventHandler(this.pctFuncionario_Click);
             // 
             // pctCliente
             // 
@@ -464,14 +465,14 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.pnlMenuPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctEmpresa)).EndInit();
             this.pnlReserva.ResumeLayout(false);
             this.pnlReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRelatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctServico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctEmpresa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctSair)).EndInit();
@@ -490,8 +491,6 @@
         private System.Windows.Forms.PictureBox pctCliente;
         private System.Windows.Forms.PictureBox pctRelatorio;
         private System.Windows.Forms.PictureBox pctServico;
-        private System.Windows.Forms.PictureBox pctEmpresa;
-        private System.Windows.Forms.PictureBox pctFuncionario;
         private System.Windows.Forms.Label lblSobre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAjuda;
@@ -510,5 +509,7 @@
         private System.Windows.Forms.DataGridView dgvReserva;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pctEmpresa;
+        private System.Windows.Forms.PictureBox pctFuncionario;
     }
 }
