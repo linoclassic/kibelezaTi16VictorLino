@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlCadEmpresa = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskdDataDeCadastro = new System.Windows.Forms.MaskedTextBox();
             this.mskdCnpjCpf = new System.Windows.Forms.MaskedTextBox();
             this.cmbDocumento = new System.Windows.Forms.ComboBox();
             this.cmbCargaHoraria = new System.Windows.Forms.ComboBox();
@@ -55,7 +55,7 @@
             this.lblNomeFanstasiaEmpresa = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.lblCadEmpresa = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlCadEmpresa.SuspendLayout();
             this.pnlTelefone01.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             this.pnlCadEmpresa.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.empresa;
             this.pnlCadEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCadEmpresa.Controls.Add(this.maskedTextBox1);
+            this.pnlCadEmpresa.Controls.Add(this.mskdDataDeCadastro);
             this.pnlCadEmpresa.Controls.Add(this.mskdCnpjCpf);
             this.pnlCadEmpresa.Controls.Add(this.cmbDocumento);
             this.pnlCadEmpresa.Controls.Add(this.cmbCargaHoraria);
@@ -86,22 +86,22 @@
             this.pnlCadEmpresa.Controls.Add(this.lblNomeFanstasiaEmpresa);
             this.pnlCadEmpresa.Controls.Add(this.lblCodigo);
             this.pnlCadEmpresa.Controls.Add(this.btnFechar);
-            this.pnlCadEmpresa.Controls.Add(this.lblCadEmpresa);
+            this.pnlCadEmpresa.Controls.Add(this.lblTitulo);
             this.pnlCadEmpresa.Location = new System.Drawing.Point(83, 125);
             this.pnlCadEmpresa.Name = "pnlCadEmpresa";
             this.pnlCadEmpresa.Size = new System.Drawing.Size(1206, 627);
             this.pnlCadEmpresa.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // mskdDataDeCadastro
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(963, 327);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(216, 22);
-            this.maskedTextBox1.TabIndex = 37;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mskdDataDeCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskdDataDeCadastro.Location = new System.Drawing.Point(963, 327);
+            this.mskdDataDeCadastro.Mask = "00/00/0000";
+            this.mskdDataDeCadastro.Name = "mskdDataDeCadastro";
+            this.mskdDataDeCadastro.Size = new System.Drawing.Size(216, 22);
+            this.mskdDataDeCadastro.TabIndex = 37;
+            this.mskdDataDeCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskdDataDeCadastro.ValidatingType = typeof(System.DateTime);
             // 
             // mskdCnpjCpf
             // 
@@ -159,6 +159,7 @@
             this.btnSalvar.TabIndex = 33;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -413,17 +414,17 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // lblCadEmpresa
+            // lblTitulo
             // 
-            this.lblCadEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(45)))));
-            this.lblCadEmpresa.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadEmpresa.ForeColor = System.Drawing.Color.White;
-            this.lblCadEmpresa.Location = new System.Drawing.Point(182, 0);
-            this.lblCadEmpresa.Name = "lblCadEmpresa";
-            this.lblCadEmpresa.Size = new System.Drawing.Size(1018, 70);
-            this.lblCadEmpresa.TabIndex = 0;
-            this.lblCadEmpresa.Text = "CADASTRAR EMPRESA";
-            this.lblCadEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(45)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(182, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(1018, 70);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "CADASTRAR EMPRESA";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCadEmpresa
             // 
@@ -450,7 +451,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlCadEmpresa;
-        private System.Windows.Forms.Label lblCadEmpresa;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label lblCargaHoraria;
         private System.Windows.Forms.Label lblDataCad;
@@ -476,6 +477,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ComboBox cmbDocumento;
         private System.Windows.Forms.MaskedTextBox mskdCnpjCpf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskdDataDeCadastro;
     }
 }

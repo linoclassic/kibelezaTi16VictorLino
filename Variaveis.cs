@@ -10,7 +10,7 @@ namespace kibelezaTi16VictorLino
     {
         // Geral
         public static string funcao;
-
+        public static int linhaSelecionada;
      
 
         // Login
