@@ -37,5 +37,9 @@ namespace kibelezaTi16VictorLino
 
         public static DateTime dataCadastroFuncionario;
 
+        //Fone Empresa
+        public static int codFoneEmpresa;
+        public static string numeroFoneEmpresa, operadoraEmpresa, descricaoEmpresa;
+
     }
 }
