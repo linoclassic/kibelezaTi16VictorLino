@@ -26,7 +26,7 @@ namespace kibelezaTi16VictorLino
         //Cliente
         public static int codCliente;
 
-        public static string nomeCliente, emailCliente, statusCliente, fotoCliente;
+        public static string nomeCliente, emailCliente,senhaCliente, statusCliente, fotoCliente, atFotoCliente,caminhoFotoCLiente;
 
         public static DateTime dataCadastroCliente;
 
@@ -40,6 +40,15 @@ namespace kibelezaTi16VictorLino
         //Fone Empresa
         public static int codFoneEmpresa;
         public static string numeroFoneEmpresa, operadoraEmpresa, descricaoEmpresa;
+
+        //Fone Cliente
+        public static int codFoneCliente;        
+        public static string numeroFoneCliente, operadoraCliente, descricaoCliente;
+
+        //FoneCliente
+        public static string enderecoServicoFtp = "ftp://127.0.0.1/admin/";
+        public static string usuarioFtp = "ti16";
+        public static string senhaFtp = "1234";
 
     }
 }

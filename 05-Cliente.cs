@@ -115,10 +115,34 @@ namespace kibelezaTi16VictorLino
         }
 
 
+        private void ExcluirCliente()
+        {
+            try
+            {
+                Banco.Conectar();
+                string excluir = "DELETE FROM `cliente` WHERE `idCliente`=@codigo";
+                MySqlCommand cmd = new MySqlCommand(excluir, Banco.conexao);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codCliente);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvCliente.DataSource = dt;
+
+                dgvCliente.ClearSelection();
+
+                Banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao excluir a empresa. \n \n" + erro.Message);
+            }
+        }
+
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            pnlCliente.Location = new Point(this.Width / 2 - pnlCliente.Width / 2, this.Height / 2 - pnlCliente.Height / 2);
-
+             pnlCliente.Location = new Point(this.Width / 2 - pnlCliente.Width / 2, this.Height / 2 - pnlCliente.Height / 2);
             CarregarCliente();
         }
 
@@ -130,6 +154,7 @@ namespace kibelezaTi16VictorLino
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            Variaveis.funcao = "CADASTRAR";
             new FrmCadCliente().Show();
             Close();
         }
@@ -152,19 +177,64 @@ namespace kibelezaTi16VictorLino
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
-            Variaveis.nomeCliente = txtCliente.Text;
 
-            if (Variaveis.nomeCliente == "")
+            if (txtCliente.Text == "")
             {
                 cmbStatus.Enabled = true;
-                cmbStatus.Text = "TODOS";
+                CarregarCliente();
             }
             else
             {
-                cmbStatus.Enabled = false;
                 cmbStatus.Text = "TODOS";
+                cmbStatus.Enabled = false;
+                Variaveis.nomeCliente = txtCliente.Text;
                 CarregarClienteNome();
             }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.funcao = "ALTERAR";
+                new FrmCadCliente().Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Para alterar selecione uma linha");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirCliente();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione a linha.");
+            }
+        }
+
+        private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codCliente = Convert.ToInt32(dgvCliente[0, Variaveis.linhaSelecionada].Value);
+            }
+        }
+
+        private void dgvCliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvCliente.Sort(dgvCliente.Columns[1], ListSortDirection.Ascending); 
+            dgvCliente.ClearSelection();
         }
     }
 }

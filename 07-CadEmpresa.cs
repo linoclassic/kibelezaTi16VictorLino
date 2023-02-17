@@ -220,7 +220,7 @@ namespace kibelezaTi16VictorLino
 
             if (txtCodigo.Text != "")
             {
-                pnlTelefone02.Enabled = true;
+                //pnlTelefone02.Enabled = true;
                 btnSalvar.Enabled = true;
                 cmbDocumento.Enabled = true;
                 mskdCnpjCpf.Enabled = true;

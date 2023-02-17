@@ -114,6 +114,31 @@ namespace kibelezaTi16VictorLino
             }
         }
 
+        private void ExcluirEmpresa()
+        {
+            try
+            {
+                Banco.Conectar();
+                string excluir = "DELETE FROM `empresa` WHERE `idEmpresa`=@codigo";
+                MySqlCommand cmd = new MySqlCommand(excluir, Banco.conexao);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codEmpresa);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvEmpresa.DataSource = dt;
+
+                dgvEmpresa.ClearSelection();
+
+                Banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao excluir a empresa. \n \n" + erro.Message);
+            }
+        }
+
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
             pnlEmpresa.Location = new Point(this.Width / 2 - pnlEmpresa.Width / 2, this.Height / 2 - pnlEmpresa.Height / 2);
@@ -207,6 +232,22 @@ namespace kibelezaTi16VictorLino
                 MessageBox.Show("Para alterar selecione uma linha");
             }
            
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                var resultado = MessageBox.Show("Deseja realmente excluir?", "EXCLUIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultado == DialogResult.Yes)
+                {
+                    ExcluirEmpresa();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Para excluir selecione a linha.");
+            }
         }
     }
 }
