@@ -41,7 +41,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.pnlTelefone02 = new System.Windows.Forms.Panel();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
@@ -65,10 +64,12 @@
             this.mskdNumeroTelefone = new System.Windows.Forms.MaskedTextBox();
             this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.lblCadClientee = new System.Windows.Forms.Label();
+            this.dgvFoneCliente = new System.Windows.Forms.DataGridView();
             this.pnlCadCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             this.pnlTelefone01.SuspendLayout();
             this.pnlTelefone.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFoneCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCadCliente
@@ -186,6 +187,7 @@
             this.btnSalvar.TabIndex = 33;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -206,10 +208,10 @@
             // 
             this.pnlTelefone01.BackgroundImage = global::kibelezaTi16VictorLino.Properties.Resources.telefone;
             this.pnlTelefone01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTelefone01.Controls.Add(this.dgvFoneCliente);
             this.pnlTelefone01.Controls.Add(this.btnExcluir);
             this.pnlTelefone01.Controls.Add(this.btnAlterar);
             this.pnlTelefone01.Controls.Add(this.btnCadastrar);
-            this.pnlTelefone01.Controls.Add(this.pnlTelefone02);
             this.pnlTelefone01.Location = new System.Drawing.Point(200, 278);
             this.pnlTelefone01.Name = "pnlTelefone01";
             this.pnlTelefone01.Size = new System.Drawing.Size(752, 319);
@@ -256,14 +258,6 @@
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // pnlTelefone02
-            // 
-            this.pnlTelefone02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(45)))));
-            this.pnlTelefone02.Location = new System.Drawing.Point(123, 3);
-            this.pnlTelefone02.Name = "pnlTelefone02";
-            this.pnlTelefone02.Size = new System.Drawing.Size(626, 261);
-            this.pnlTelefone02.TabIndex = 0;
             // 
             // cmbStatus
             // 
@@ -555,6 +549,14 @@
             this.lblCadClientee.Text = "CÓDIGO";
             this.lblCadClientee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvFoneCliente
+            // 
+            this.dgvFoneCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFoneCliente.Location = new System.Drawing.Point(123, 3);
+            this.dgvFoneCliente.Name = "dgvFoneCliente";
+            this.dgvFoneCliente.Size = new System.Drawing.Size(626, 257);
+            this.dgvFoneCliente.TabIndex = 4;
+            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +579,7 @@
             this.pnlTelefone01.ResumeLayout(false);
             this.pnlTelefone.ResumeLayout(false);
             this.pnlTelefone.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFoneCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,7 +595,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Panel pnlTelefone02;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNomeCliente;
@@ -620,5 +622,6 @@
         private System.Windows.Forms.MaskedTextBox mskdNumeroTelefone;
         private System.Windows.Forms.ComboBox cmbCodigo;
         private System.Windows.Forms.Label lblCadClientee;
+        private System.Windows.Forms.DataGridView dgvFoneCliente;
     }
 }

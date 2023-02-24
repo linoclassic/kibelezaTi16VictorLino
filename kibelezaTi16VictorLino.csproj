@@ -172,6 +172,7 @@
       <DependentUpon>14-Reserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Banco.cs" />
+    <Compile Include="ftp.cs" />
     <Compile Include="MeuCalendario.cs">
       <SubType>Component</SubType>
     </Compile>
