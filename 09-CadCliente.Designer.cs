@@ -38,6 +38,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.pnlTelefone01 = new System.Windows.Forms.Panel();
+            this.dgvFoneCliente = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -64,12 +65,11 @@
             this.mskdNumeroTelefone = new System.Windows.Forms.MaskedTextBox();
             this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.lblCadClientee = new System.Windows.Forms.Label();
-            this.dgvFoneCliente = new System.Windows.Forms.DataGridView();
             this.pnlCadCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             this.pnlTelefone01.SuspendLayout();
-            this.pnlTelefone.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoneCliente)).BeginInit();
+            this.pnlTelefone.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCadCliente
@@ -115,6 +115,7 @@
             this.btnFoto.TabIndex = 42;
             this.btnFoto.Text = "+";
             this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // pctFoto
             // 
@@ -142,7 +143,6 @@
             // txtSenha
             // 
             this.txtSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtSenha.Enabled = false;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(971, 183);
             this.txtSenha.Name = "txtSenha";
@@ -217,6 +217,16 @@
             this.pnlTelefone01.Size = new System.Drawing.Size(752, 319);
             this.pnlTelefone01.TabIndex = 31;
             // 
+            // dgvFoneCliente
+            // 
+            this.dgvFoneCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFoneCliente.Location = new System.Drawing.Point(123, 3);
+            this.dgvFoneCliente.Name = "dgvFoneCliente";
+            this.dgvFoneCliente.Size = new System.Drawing.Size(626, 257);
+            this.dgvFoneCliente.TabIndex = 4;
+            this.dgvFoneCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFoneCliente_CellClick);
+            this.dgvFoneCliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFoneCliente_ColumnHeaderMouseClick);
+            // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(52)))), ((int)(((byte)(96)))));
@@ -230,6 +240,7 @@
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -262,7 +273,6 @@
             // cmbStatus
             // 
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.Enabled = false;
             this.cmbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(200, 238);
@@ -273,7 +283,6 @@
             // txtEmail
             // 
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(200, 183);
             this.txtEmail.Name = "txtEmail";
@@ -422,6 +431,7 @@
             this.btmFecharTel.Size = new System.Drawing.Size(50, 50);
             this.btmFecharTel.TabIndex = 38;
             this.btmFecharTel.UseVisualStyleBackColor = false;
+            this.btmFecharTel.Click += new System.EventHandler(this.btmFecharTel_Click);
             // 
             // btnSalvarTel
             // 
@@ -450,6 +460,7 @@
             this.btnLimparTel.TabIndex = 38;
             this.btnLimparTel.Text = "LIMPAR";
             this.btnLimparTel.UseVisualStyleBackColor = false;
+            this.btnLimparTel.Click += new System.EventHandler(this.btnLimparTel_Click);
             // 
             // txtDescricao
             // 
@@ -549,14 +560,6 @@
             this.lblCadClientee.Text = "CÓDIGO";
             this.lblCadClientee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvFoneCliente
-            // 
-            this.dgvFoneCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFoneCliente.Location = new System.Drawing.Point(123, 3);
-            this.dgvFoneCliente.Name = "dgvFoneCliente";
-            this.dgvFoneCliente.Size = new System.Drawing.Size(626, 257);
-            this.dgvFoneCliente.TabIndex = 4;
-            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,9 +580,9 @@
             this.pnlCadCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             this.pnlTelefone01.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFoneCliente)).EndInit();
             this.pnlTelefone.ResumeLayout(false);
             this.pnlTelefone.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFoneCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
