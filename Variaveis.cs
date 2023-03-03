@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace kibelezaTi16VictorLino
 {
@@ -50,5 +51,19 @@ namespace kibelezaTi16VictorLino
         public static string usuarioFtp = "ti16";
         public static string senhaFtp = "1234";
 
+        //servico
+        public static int codServico;
+        public static string nomeServico;
+
+
+        //reserva 
+        public static int codReserva;
+        public static string obsReserva, statusReserva;
+        public static DateTime dataReserva, horarioReserva;
+
     }
+
+
+    
+
 }

@@ -39,9 +39,9 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblFuncionario = new System.Windows.Forms.Label();
             this.lblDataReserva = new System.Windows.Forms.Label();
-            this.meuCalendario1 = new kibelezaTi16VictorLino.MeuCalendario();
+            this.calReserva = new kibelezaTi16VictorLino.MeuCalendario();
             this.lblHoraio = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
             this.lblObservacao = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -69,9 +69,9 @@
             this.pnlEmpresa.Controls.Add(this.lblCliente);
             this.pnlEmpresa.Controls.Add(this.lblFuncionario);
             this.pnlEmpresa.Controls.Add(this.lblDataReserva);
-            this.pnlEmpresa.Controls.Add(this.meuCalendario1);
+            this.pnlEmpresa.Controls.Add(this.calReserva);
             this.pnlEmpresa.Controls.Add(this.lblHoraio);
-            this.pnlEmpresa.Controls.Add(this.textBox1);
+            this.pnlEmpresa.Controls.Add(this.txtObservacao);
             this.pnlEmpresa.Controls.Add(this.lblObservacao);
             this.pnlEmpresa.Controls.Add(this.txtCodigo);
             this.pnlEmpresa.Controls.Add(this.btnSalvar);
@@ -92,6 +92,7 @@
             this.cmbHorario.Name = "cmbHorario";
             this.cmbHorario.Size = new System.Drawing.Size(113, 21);
             this.cmbHorario.TabIndex = 40;
+            this.cmbHorario.SelectedIndexChanged += new System.EventHandler(this.cmbHorario_SelectedIndexChanged);
             // 
             // cmbStatus
             // 
@@ -145,6 +146,7 @@
             this.cmbFuncionario.Name = "cmbFuncionario";
             this.cmbFuncionario.Size = new System.Drawing.Size(637, 21);
             this.cmbFuncionario.TabIndex = 35;
+            this.cmbFuncionario.SelectionChangeCommitted += new System.EventHandler(this.cmbFuncionario_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -194,14 +196,14 @@
             this.lblDataReserva.TabIndex = 29;
             this.lblDataReserva.Text = "DATA DA RESERVA";
             // 
-            // meuCalendario1
+            // calReserva
             // 
-            this.meuCalendario1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.meuCalendario1.Location = new System.Drawing.Point(878, 194);
-            this.meuCalendario1.Name = "meuCalendario1";
-            this.meuCalendario1.TabIndex = 28;
-            this.meuCalendario1.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(40)))));
-            this.meuCalendario1.TitleForeColor = System.Drawing.Color.Pink;
+            this.calReserva.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.calReserva.Location = new System.Drawing.Point(878, 194);
+            this.calReserva.Name = "calReserva";
+            this.calReserva.TabIndex = 28;
+            this.calReserva.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(40)))));
+            this.calReserva.TitleForeColor = System.Drawing.Color.Pink;
             // 
             // lblHoraio
             // 
@@ -215,14 +217,15 @@
             this.lblHoraio.TabIndex = 26;
             this.lblHoraio.Text = "HORÁRIO";
             // 
-            // textBox1
+            // txtObservacao
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(354, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(837, 22);
-            this.textBox1.TabIndex = 25;
+            this.txtObservacao.Enabled = false;
+            this.txtObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacao.Location = new System.Drawing.Point(354, 108);
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(837, 22);
+            this.txtObservacao.TabIndex = 25;
+            this.txtObservacao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservacao_KeyPress);
             // 
             // lblObservacao
             // 
@@ -257,6 +260,7 @@
             this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // lblCodigo
             // 
@@ -282,6 +286,7 @@
             this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCadastrar
             // 
@@ -366,11 +371,11 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.Label lblObservacao;
         private System.Windows.Forms.Label lblHoraio;
         private System.Windows.Forms.Label lblDataReserva;
-        private MeuCalendario meuCalendario1;
+        private MeuCalendario calReserva;
         private System.Windows.Forms.Label lblFuncionario;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label1;
