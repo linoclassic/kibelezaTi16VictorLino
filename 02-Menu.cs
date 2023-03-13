@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,80 @@ namespace kibelezaTi16VictorLino
 {
     public partial class frmMenuPrincipal : Form
     {
+
+        private void CarregarReserva()
+        {
+            try
+            {
+                Banco.Conectar();
+                string selecionar = "SELECT * FROM `reservadata` WHERE `CLIENTE` LIKE '%" + Variaveis.nomeCliente + "%'";
+                MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvReserva.DataSource = dt;
+                dgvReserva.Columns[0].Visible = false;
+                dgvReserva.ClearSelection();
+                Banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar a Reserva.\n\n" + erro.Message);
+
+            }
+        }
+
+        private void CarregarReservaStatus()
+        {
+            try
+            {
+                Banco.Conectar();
+                string selecionar = "SELECT * FROM `reservadata` WHERE `STATUS` = @status AND `CLIENTE` LIKE '%" + Variaveis.nomeCliente + "%'";
+                MySqlCommand cmd = new MySqlCommand(selecionar, Banco.conexao);
+                cmd.Parameters.AddWithValue("@status", Variaveis.statusReserva);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvReserva.DataSource = dt;
+                dgvReserva.Columns[0].Visible = false;
+                dgvReserva.ClearSelection();
+                Banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao selecionar a Reserva.\n\n" + erro.Message);
+            }
+        }
+
+
+        private void AlterarStatus()
+        {
+            try
+            {
+                Banco.Conectar();
+                string alterar = "UPDATE `reserva` SET `statusReserva`'=@status WHERE `idReserva`=@codigo;";
+                MySqlCommand cmd = new MySqlCommand(alterar, Banco.conexao);
+                cmd.Parameters.AddWithValue("@status", Variaveis.statusReserva);
+                cmd.Parameters.AddWithValue("@codigo", Variaveis.codReserva);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvReserva.DataSource = dt;
+                dgvReserva.ClearSelection();
+
+                MessageBox.Show("A reserva" + Variaveis.codReserva + " foi alterada para " + Variaveis.statusReserva);
+                Banco.Desconectar();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao atualizar o status da reserva.\n\n" + erro.Message);
+            }
+        }
+
+
+
+
         int hora = DateTime.Now.Hour;
         int clickReserva;
         public frmMenuPrincipal()
@@ -23,7 +98,9 @@ namespace kibelezaTi16VictorLino
         {
             pnlMenuPrincipal.Location = new Point(this.Width / 2 - pnlMenuPrincipal.Width / 2, this.Height / 2 - pnlMenuPrincipal.Height / 2);
 
-            
+            cmbStatus.SelectedIndex = 0;
+            Variaveis.linhaSelecionada = -1;
+            CarregarReserva();
 
             timer1.Start();
 
@@ -33,9 +110,9 @@ namespace kibelezaTi16VictorLino
             }
             else if (hora >= 12 && hora < 18)
             {
-                lblMensagem.Text = "Boa tarde "  + Variaveis.usuario + "!";
+                lblMensagem.Text = "Boa tarde " + Variaveis.usuario + "!";
             }
-            else 
+            else
             {
                 lblMensagem.Text = "Boa noite " + Variaveis.usuario + "!";
             }
@@ -48,7 +125,7 @@ namespace kibelezaTi16VictorLino
             else
             {
                 pctFuncionario.Enabled = true;
-                pctEmpresa.Enabled=true;
+                pctEmpresa.Enabled = true;
             }
 
 
@@ -62,7 +139,7 @@ namespace kibelezaTi16VictorLino
             {
                 Application.Exit();
             }
-            else if(resposta == DialogResult.No)
+            else if (resposta == DialogResult.No)
             {
                 new frmLogin().Show();
                 Close();
@@ -88,12 +165,12 @@ namespace kibelezaTi16VictorLino
 
         private void lblMensagem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pctReserva_Click(object sender, EventArgs e)
         {
-            if (clickReserva == 0 )
+            if (clickReserva == 0)
             {
                 pctReserva.BackColor = Color.FromArgb(162, 52, 96);
                 btnAgendar.Visible = true;
@@ -124,7 +201,22 @@ namespace kibelezaTi16VictorLino
 
         private void btnAprovar_Click(object sender, EventArgs e)
         {
-            esconderBotoes();   
+            esconderBotoes();
+
+            Variaveis.statusReserva = "APROVADA";
+            AlterarStatus();
+            Variaveis.statusReserva = cmbStatus.Text;
+            Variaveis.nomeCliente = txtCliente.Text;
+            if (Variaveis.statusReserva == "TODAS")
+            {
+                CarregarReserva();
+            }
+
+            else
+            {
+                CarregarReservaStatus();
+            }
+
         }
 
         private void pctEmpresa_Click(object sender, EventArgs e)
@@ -179,6 +271,51 @@ namespace kibelezaTi16VictorLino
         {
             new frmEmpresa().Show();
             Hide();
+        }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+            Variaveis.statusReserva = cmbStatus.Text; Variaveis.nomeCliente = txtCliente.Text;
+            if (Variaveis.statusReserva == "TODAS")
+            {
+                CarregarReserva();
+            }
+
+            else
+            {
+                CarregarReservaStatus();
+            }
+
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variaveis.statusReserva = cmbStatus.Text;
+            Variaveis.nomeCliente = txtCliente.Text; if (Variaveis.statusReserva == "TODAS")
+            {
+                CarregarReserva();
+            }
+
+            else
+            {
+                CarregarReservaStatus();
+            }
+        }
+
+        private void dgvReserva_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variaveis.linhaSelecionada = int.Parse(e.RowIndex.ToString());
+            if (Variaveis.linhaSelecionada >= 0)
+            {
+                Variaveis.codReserva = Convert.ToInt32(dgvReserva[0, Variaveis.linhaSelecionada].Value);
+            }
+             
+        }
+
+        private void dgvReserva_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvReserva.Sort(dgvReserva.Columns[1], ListSortDirection.Ascending);
+            dgvReserva.ClearSelection();
         }
     }
 }

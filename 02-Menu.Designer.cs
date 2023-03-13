@@ -42,8 +42,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAprovar = new System.Windows.Forms.Button();
             this.pctReserva = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblAjuda = new System.Windows.Forms.Label();
@@ -129,8 +129,8 @@
             this.pnlReserva.Controls.Add(this.btnCancelar);
             this.pnlReserva.Controls.Add(this.btnAprovar);
             this.pnlReserva.Controls.Add(this.pctReserva);
-            this.pnlReserva.Controls.Add(this.comboBox1);
-            this.pnlReserva.Controls.Add(this.textBox1);
+            this.pnlReserva.Controls.Add(this.cmbStatus);
+            this.pnlReserva.Controls.Add(this.txtCliente);
             this.pnlReserva.Controls.Add(this.lblStatus);
             this.pnlReserva.Controls.Add(this.lblCliente);
             this.pnlReserva.Location = new System.Drawing.Point(406, 4);
@@ -146,6 +146,8 @@
             this.dgvReserva.Name = "dgvReserva";
             this.dgvReserva.Size = new System.Drawing.Size(774, 302);
             this.dgvReserva.TabIndex = 6;
+            this.dgvReserva.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReserva_CellClick);
+            this.dgvReserva.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvReserva_ColumnHeaderMouseClick);
             // 
             // btnAgendar
             // 
@@ -263,30 +265,32 @@
             this.pctReserva.TabStop = false;
             this.pctReserva.Click += new System.EventHandler(this.pctReserva_Click);
             // 
-            // comboBox1
+            // cmbStatus
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(45)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbStatus.BackColor = System.Drawing.Color.White;
+            this.cmbStatus.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(45)))));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
             "TODAS",
             "APROVADA",
             "CANCELADA",
             "AGUARDANDO",
             "FINALIZADA"});
-            this.comboBox1.Location = new System.Drawing.Point(608, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 31);
-            this.comboBox1.TabIndex = 3;
+            this.cmbStatus.Location = new System.Drawing.Point(608, 13);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(167, 31);
+            this.cmbStatus.TabIndex = 3;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtCliente
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(103, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(410, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Location = new System.Drawing.Point(103, 13);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(410, 31);
+            this.txtCliente.TabIndex = 2;
+            this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
             // 
             // lblStatus
             // 
@@ -496,9 +500,9 @@
         private System.Windows.Forms.Label lblAjuda;
         private System.Windows.Forms.Panel pnlReserva;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.PictureBox pctReserva;
         private System.Windows.Forms.Button btnAprovar;
         private System.Windows.Forms.Button btnCancelar;

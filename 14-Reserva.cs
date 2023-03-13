@@ -333,7 +333,8 @@ namespace kibelezaTi16VictorLino
                     Variaveis.statusReserva = cmbStatus.Text;
                     Variaveis.codFuncionario = Convert.ToInt32(cmbFuncionario.SelectedValue);
                     Variaveis.codCliente = Convert.ToInt32(cmbCliente.SelectedValue);
-                    Variaveis.codServico = Convert.ToInt32(cmbServico.SelectedValue); if (Variaveis.funcao == "AGENDAR")
+                    Variaveis.codServico = Convert.ToInt32(cmbServico.SelectedValue);
+                if (Variaveis.funcao == "AGENDAR")
                     {
                         InserirReserva();
                     }

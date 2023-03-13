@@ -12,13 +12,13 @@ namespace kibelezaTi16VictorLino
         // Geral
         public static string funcao;
         public static int linhaSelecionada;
-     
+
 
         // Login
         public static string usuario, senha, nivel;
 
         //Empresa
-        public static int codEmpresa;   
+        public static int codEmpresa;
 
         public static string nomeEmpresa, cnpjCpfEmpresa, razaoSocialEmpresa, emailEmpresa, statusEmpresa;
 
@@ -27,7 +27,7 @@ namespace kibelezaTi16VictorLino
         //Cliente
         public static int codCliente;
 
-        public static string nomeCliente, emailCliente,senhaCliente, statusCliente, fotoCliente, atFotoCliente,caminhoFotoCLiente;
+        public static string nomeCliente, emailCliente, senhaCliente, statusCliente, fotoCliente, atFotoCliente, caminhoFotoCLiente;
 
         public static DateTime dataCadastroCliente;
 
@@ -43,7 +43,7 @@ namespace kibelezaTi16VictorLino
         public static string numeroFoneEmpresa, operadoraEmpresa, descricaoEmpresa;
 
         //Fone Cliente
-        public static int codFoneCliente;        
+        public static int codFoneCliente;
         public static string numeroFoneCliente, operadoraCliente, descricaoCliente;
 
         //FoneCliente
@@ -61,9 +61,12 @@ namespace kibelezaTi16VictorLino
         public static string obsReserva, statusReserva;
         public static DateTime dataReserva, horarioReserva;
 
+        //relatorio
+        public static string relatorio;
+
     }
 
 
-    
+
 
 }
